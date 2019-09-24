@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  golang:
+    image: golang:stretch
+    depends_on:
+      - gpubsub
+    environment:
+      PUBSUB_EMULATOR_HOST: "gpubsub:8793"
+    volumes:
+      - .:/goevent
+    working_dir: /goevent
+
+  gpubsub:
+    image: google/cloud-sdk:latest
+    ports:
+      - "8793:8793"
+    entrypoint:
+      - gcloud
+      - beta
+      - emulators
+      - pubsub
+      - start
+      - "--host-port=0.0.0.0:8793"
