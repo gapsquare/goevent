@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/isuruceanu/goevent.svg?branch=master)](https://travis-ci.com/isuruceanu/goevent)
 
 # GoEvent
 
