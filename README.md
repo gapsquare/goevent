@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/isuruceanu/goevent.svg?branch=master)](https://travis-ci.com/isuruceanu/goevent)
-
+[![Coverage Status](https://coveralls.io/repos/github/isuruceanu/goevent/badge.svg?branch=master)](https://coveralls.io/github/isuruceanu/goevent?branch=master)
 # GoEvent
 
 GoEvent is a simple implementation of eventing toolkit for Go
