@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/isuruceanu/goevent.svg?branch=master)](https://travis-ci.com/isuruceanu/goevent)
-<a href='https://coveralls.io/github/isuruceanu/goevent?branch=master'><img src='https://coveralls.io/repos/github/isuruceanu/goevent/badge.svg?branch=master' alt='Coverage Status' /></a>
+[![Coverage Status](https://coveralls.io/repos/github/isuruceanu/goevent/badge.svg?branch=master&service=github)](https://coveralls.io/github/isuruceanu/goevent?branch=master&service=github)
+
 
 # GoEvent
 
