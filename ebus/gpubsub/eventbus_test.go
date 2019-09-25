@@ -14,6 +14,16 @@
 
 package gpubsub
 
+import (
+	"crypto/rand"
+	"encoding/hex"
+	"os"
+	"testing"
+	"time"
+
+	"github.com/isuruceanu/goevent/ebus"
+)
+
 // func TestGooglePubSub(t *testing.T) {
 // 	// jsonKey, err := ioutil.ReadFile("pubsub-experiment.json")
 // 	// if err != nil {
@@ -45,30 +55,30 @@ package gpubsub
 // 	eventbus.AcceptanceTest(t, bus1, bus2, time.Second)
 // }
 
-// func TestEventBus(t *testing.T) {
-// 	if os.Getenv("PUBSUB_EMULATOR_HOST") == "" {
-// 		os.Setenv("PUBSUB_EMULATOR_HOST", "localhost:8793")
-// 		//t.Fatal("PUBSUB_EMULATOR_HOST is not set. Please setup docker pubsub first")
-// 	}
+func TestEventBus(t *testing.T) {
+	if os.Getenv("PUBSUB_EMULATOR_HOST") == "" {
+		os.Setenv("PUBSUB_EMULATOR_HOST", "localhost:8793")
+		//t.Fatal("PUBSUB_EMULATOR_HOST is not set. Please setup docker pubsub first")
+	}
 
-// 	// Get a random app ID.
-// 	b := make([]byte, 8)
-// 	if _, err := rand.Read(b); err != nil {
-// 		t.Fatal(err)
-// 	}
+	// Get a random app ID.
+	b := make([]byte, 8)
+	if _, err := rand.Read(b); err != nil {
+		t.Fatal(err)
+	}
 
-// 	appID := "app-" + hex.EncodeToString(b)
-// 	bus1, err := NewEventBus("project_id", appID)
-// 	if err != nil {
-// 		t.Fatal(err)
-// 	}
+	appID := "app-" + hex.EncodeToString(b)
+	bus1, err := NewEventBus("project_id", appID)
+	if err != nil {
+		t.Fatal(err)
+	}
 
-// 	bus2, err := NewEventBus("project_id", appID)
-// 	if err != nil {
-// 		t.Fatal(err)
-// 	}
+	bus2, err := NewEventBus("project_id", appID)
+	if err != nil {
+		t.Fatal(err)
+	}
 
-// 	t.Log("Run gpubsub tests")
-// 	ebus.AcceptanceTest(t, bus1, bus2, time.Second)
+	t.Log("Run gpubsub tests")
+	ebus.AcceptanceTest(t, bus1, bus2, time.Second)
 
-// }
+}

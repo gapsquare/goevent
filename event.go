@@ -58,8 +58,8 @@ func NewEvent(topic EventTopic, data EventData) Event {
 	}
 }
 
-// NewEventForAggregate creates a new event for an aggregate object
-func NewEventForAggregate(topic EventTopic, data EventData, timestamp time.Time, version VersionType) Event {
+// NewEventTimeVersion creates a new event for an aggregate object
+func NewEventTimeVersion(topic EventTopic, data EventData, timestamp time.Time, version VersionType) Event {
 	return event{
 		topic:     topic,
 		data:      data,

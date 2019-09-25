@@ -67,13 +67,15 @@ func AcceptanceTest(t *testing.T, bus1, bus2 goevent.EventBus, timeout time.Dura
 		bus1.AddHandler(goevent.MatchAny(), NewEventHandler("multi"))
 	}()
 
+	registerEventData()
+
 	//ctx := mocks.WithContextOne(context.Background(), "testval")
 	ctx := context.Background()
 
 	// Without handler
 	//id, _ := uuid.Parse("b2238a5b-c5bb-5aa0-3acb-1a5b6b8d1234")
 	timestamp := time.Date(2019, time.January, 11, 22, 0, 0, 0, time.UTC)
-	event1 := goevent.NewEventForAggregate(Topic, &EventData{Content: "event1"}, timestamp, goevent.VersionType(1))
+	event1 := goevent.NewEventTimeVersion(Topic, &EventData{Content: "event1"}, timestamp, goevent.VersionType(1))
 	if err := bus1.Publish(ctx, event1); err != nil {
 		t.Error("there should be no error: ", err)
 	}

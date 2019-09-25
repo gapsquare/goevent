@@ -17,6 +17,7 @@ package goevent
 import (
 	"reflect"
 	"testing"
+	"time"
 )
 
 func TestNewEvent(t *testing.T) {
@@ -37,8 +38,25 @@ func TestNewEvent(t *testing.T) {
 	}
 }
 
+func TestNewEventWithTimeAndVersion(t *testing.T) {
+
+	version := VersionType(1)
+	timestamp := time.Date(2019, time.January, 11, 22, 0, 0, 0, time.UTC)
+	event := NewEventTimeVersion(TestEventRegisterTopic, &TestEventRegisterData{}, timestamp, version)
+
+	if event.Timestamp() != timestamp {
+		t.Errorf("timestamp differs, expected %v, actual %v", timestamp, event.Timestamp())
+	}
+
+	if event.Version() != version {
+		t.Errorf("version differs, expected %v, actual %v", version, event.Version())
+	}
+
+}
+
 func TestCreateEventData(t *testing.T) {
 	data, err := CreateEventData(TestEventRegisterTopic)
+
 	if err.Error() != errEventDataNotRegistered(TestEventRegisterTopic).Error() {
 		t.Error("there should be a event not registered error:", err)
 	}
