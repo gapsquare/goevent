@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/isuruceanu/goevent/ebus"
+	"github.com/gapsquare/goevent/ebus"
 )
 
 // func TestGooglePubSub(t *testing.T) {

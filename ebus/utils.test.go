@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 )
 
 // CompareEvents copares two events, ignoring their version and timestamp

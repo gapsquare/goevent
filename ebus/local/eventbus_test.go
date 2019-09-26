@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/isuruceanu/goevent/ebus"
+	"github.com/gapsquare/goevent/ebus"
 )
 
 func TestEventBus(t *testing.T) {

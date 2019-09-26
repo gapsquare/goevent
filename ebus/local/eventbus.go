@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 
 	"github.com/google/uuid"
 )

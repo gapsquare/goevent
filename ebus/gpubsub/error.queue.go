@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/pubsub"
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 	"google.golang.org/api/option"
 )
 

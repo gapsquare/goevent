@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 
 	"github.com/kr/pretty"
 )

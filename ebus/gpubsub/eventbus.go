@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 
 	"cloud.google.com/go/pubsub"
 	"github.com/globalsign/mgo/bson"

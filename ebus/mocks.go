@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/isuruceanu/goevent"
+	"github.com/gapsquare/goevent"
 )
 
 const (

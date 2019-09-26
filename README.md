@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/isuruceanu/goevent.svg?branch=master)](https://travis-ci.com/isuruceanu/goevent)
-[![Coverage Status](https://coveralls.io/repos/github/isuruceanu/goevent/badge.svg?branch=master&service=github)](https://coveralls.io/github/isuruceanu/goevent?branch=master&service=github)
+[![Build Status](https://travis-ci.com/gapsquare/goevent.svg?branch=master)](https://travis-ci.com/gapsquare/goevent)
+[![Coverage Status](https://coveralls.io/repos/github/gapsquare/goevent/badge.svg?branch=master&service=github)](https://coveralls.io/github/gapsquare/goevent?branch=master&service=github)
 
 
 # GoEvent
